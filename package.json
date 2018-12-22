@@ -4,7 +4,10 @@
   "description": "Development my project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "react-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "repository": "git+https://github.com/kaibara/calculator.git",
   "author": "Takumi Kaibara <kaibara.miraidenshi@gmail.com>",
@@ -12,5 +15,20 @@
   "bugs": {
     "url": "https://github.com/kaibara/calculator/issues"
   },
+  "private": true,
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "homepage": "https://github.com/kaibara/calculator#readme"
 }
