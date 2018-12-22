@@ -1,26 +1,58 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, Component } from "react";
 
 class App extends Component {
   render() {
+    return <Calculator />;
+  }
+}
+
+class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sum: 0
+    };
+  }
+  input = event => {
+    this.setState({ input: event.target.value });
+  };
+  Plus = () => {
+    this.setState({ sum: this.state.sum + this.state.input });
+  };
+  Main = () => {
+    this.setState({ sum: this.state.sum - this.state.input });
+  };
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Fragment>
+        <h2>現金</h2>
+        <h3>
+          現在:&nbsp;
+          {this.state.sum}
+        </h3>
+        <input onChange={this.input} />
+        <br />
+        <button onClick={this.Plus}>収入</button>
+        <button onClick={this.Main}>支出</button>
+        <h2>口座</h2>
+        <h3>
+          現在:&nbsp;
+          {this.state.sum}
+        </h3>
+        <input onClick={() => this.state.input} />
+        <br />
+        <button onClick={this.Plus}>収入</button>
+        <button onClick={this.Main}>支出</button>
+        <h2>カード</h2>
+        <h3>
+          現在:&nbsp;
+          {this.state.sum}
+        </h3>
+        <input onClick={() => this.state.input} />
+        <br />
+        <button onClick={this.Plus}>収入</button>
+        <button onClick={this.Main}>支出</button>
+      </Fragment>
     );
   }
 }
