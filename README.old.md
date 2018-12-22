@@ -1,2 +1,0 @@
-# calculator
-Development my project
