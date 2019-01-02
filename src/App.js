@@ -27,15 +27,6 @@ class Calculator extends Component {
     return (
       <Fragment>
         <Cache />
-        <h2>現金</h2>
-        <h3>
-          現在:&nbsp;
-          {this.state.sum}
-        </h3>
-        <input onChange={this.input} />
-        <br />
-        <button onClick={this.Plus}>収入</button>
-        <button onClick={this.Main}>支出</button>
         <h2>口座</h2>
         <h3>
           現在:&nbsp;
