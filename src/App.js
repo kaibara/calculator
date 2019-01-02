@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from "react";
+import Cache from "Cache";
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class Calculator extends Component {
   render() {
     return (
       <Fragment>
+        <Cache />
         <h2>現金</h2>
         <h3>
           現在:&nbsp;
