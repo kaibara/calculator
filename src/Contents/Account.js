@@ -1,14 +1,14 @@
 import React, { Fragment, Component } from "react";
 
-class Cache extends Component {
+class Account extends Component {
   constructor(props) {
     super(props);
     this.state = {
       sum: 0
     };
   }
-  input = event => {
-    this.setState({ input: event.target.value });
+  input = () => {
+    this.setState({ input: this.state.input });
   };
   Plus = () => {
     this.setState({ sum: this.state.sum + this.state.input });
@@ -17,9 +17,10 @@ class Cache extends Component {
     this.setState({ sum: this.state.sum - this.state.input });
   };
   render() {
+    console.log(this.input);
     return (
       <Fragment>
-        <h2>現金</h2>
+        <h2>口座</h2>
         <h3>
           現在:&nbsp;
           {this.state.sum}
@@ -33,4 +34,4 @@ class Cache extends Component {
   }
 }
 
-export default Cache;
+export default Account;
