@@ -1,14 +1,10 @@
 import React, { Fragment, Component } from "react";
 
 class Cache extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sum: 0
-    };
-  }
-  input = () => {
-    this.setState({ input: this.state.input });
+  state = { sum: 0 };
+  input = event => {
+    this.setState({ input: event.target.value });
+    console.log(this.state.input);
   };
   Plus = () => {
     this.setState({ sum: this.state.sum + this.state.input });

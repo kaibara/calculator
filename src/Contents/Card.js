@@ -1,14 +1,10 @@
 import React, { Fragment, Component } from "react";
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sum: 0
-    };
-  }
-  input = () => {
-    this.setState({ input: this.state.input });
+  state = { sum: 0 };
+  input = event => {
+    this.setState({ input: event.target.value });
+    console.log(this.state.input);
   };
   Plus = () => {
     this.setState({ sum: this.state.sum + this.state.input });
@@ -19,7 +15,7 @@ class Card extends Component {
   render() {
     return (
       <Fragment>
-        <h2>現金</h2>
+        <h2>カード</h2>
         <h3>
           現在:&nbsp;
           {this.state.sum}

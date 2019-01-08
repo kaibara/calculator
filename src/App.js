@@ -9,7 +9,7 @@ class App extends Component {
       <Fragment>
         <Cache />
         <Account />
-        <Card />>
+        <Card />
       </Fragment>
     );
   }
