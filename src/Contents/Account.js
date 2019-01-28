@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 
-class Card extends Component {
+class Account extends Component {
   state = { sum: 0, input: 0 };
   input = event => {
     this.setState({ input: Number(event.target.value) });
@@ -29,4 +29,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default Account;
