@@ -17,9 +17,15 @@ $ create-react-app ../calculator
 
 ## heroku
 ```
+ $ sudo snap install --classic heroku
  $ heroku login
  $ heroku git:remote -a myself-calculator
  // Add codes for Heroku's remote repository
  $ git push heroku master
  // push Heroku's remote repository
+```
+
+## Firebase
+```
+ $ yarn add firebase
 ```
