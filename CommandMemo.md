@@ -27,5 +27,5 @@ $ create-react-app ../calculator
 
 ## Firebase
 ```
- $ yarn global add firebase
+ $ yarn add firebase
 ```
