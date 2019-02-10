@@ -23,6 +23,7 @@ class Auth extends Component {
   render() {
     return (
       <div className="Auth">
+	<h1>開発中止中</h1>
       {this.state.user ? (
         <h1 className="UserName">{this.state.user && this.state.user.displayName}の家計簿</h1>
       ) : (
