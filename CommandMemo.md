@@ -15,17 +15,11 @@ $ create-react-app ../calculator
 // making react enviroment for this directory
 ```
 
-## heroku
-```
- $ sudo snap install --classic heroku
- $ heroku login
- $ heroku git:remote -a myself-calculator
- // Add codes for Heroku's remote repository
- $ git push heroku master
- // push Heroku's remote repository
-```
-
 ## Firebase
 ```
- $ yarn add firebase
+ $ yarn add firebase firebase-cli
+ $ firebase login
+ $ firebase init
+ $ firebase deploy
+ // Upload Internet
 ```
