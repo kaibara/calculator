@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 
-class Card extends Component {
+class Account extends Component {
   state = { sum: 0, input: 0 };
   input = event => {
     this.setState({ input: Number(event.target.value) });
@@ -13,20 +13,21 @@ class Card extends Component {
     this.setState(prevState => ({ sum: this.state.sum - this.state.input }));
   };
   render() {
+    const styles={
+      margin: "auto"
+    };
     return (
       <Fragment>
-        <h2>カード</h2>
-        <h3>
-          現在:&nbsp;
-          {this.state.sum}
-        </h3>
-        <input value={this.state.input} onChange={this.input} />
-        <br />
-        <button onClick={this.Plus}>収入</button>
-        <button onClick={this.Minus}>支出</button>
+        <div className="account" style={styles}>
+          <h2>口座:&nbsp;{this.state.sum}</h2>
+          <input value={this.state.input} onChange={this.input} />
+          <br />
+          <button onClick={this.Plus}>収入</button>
+          <button onClick={this.Minus}>支出</button>
+        </div>
       </Fragment>
     );
   }
 }
 
-export default Card;
+export default Account;
